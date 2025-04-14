@@ -1,14 +1,11 @@
- import quotesArr from "../data/quotes.json"
-
+ import quotesArr from "../quotes.json"
+import Quote from "./Quote";
  function Quotes(){
      return (
         <>
         {
-         quotesArr.map((quote , index )=>{
-        return  <div  className="quote">
-            <h1>"{quote.quote}"</h1>
-            <footer>{quote.author}</footer>
-          </div>
+          quotesArr.map((quote)=>{
+        return <Quote quote={quote}></Quote>
          })
         }
         </>
